@@ -7,7 +7,7 @@
  *
  * Description: false or true validation
  *
- * Return : 0 (Success)
+ * Return: 0 (success)
 */
 
 int main(void)
