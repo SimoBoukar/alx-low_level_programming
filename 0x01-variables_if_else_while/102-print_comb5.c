@@ -20,22 +20,22 @@ int main(void)
 			if (seconDigit != firstDigit)
 			{
 				putchar((firstDigit / 10) + 48);
-				putcahr((firstDigit % 10) + 48);
+				putchar((firstDigit % 10) + 48);
 				putchar(' ');
 				putchar((seconDigit / 10) + 48);
-				putcahr((seconDigit % 10) + 48);
+				putchar((seconDigit % 10) + 48);
 
 				if (firstDigit != 98 || seconDigit != 98)
 				{
 				putchar(',');
-				putcahr(' ');
+				putchar(' ');
 				}
 			}
 			seconDigit++;
 		}
 		firstDigit++;
 	}
-	putcahr('\n');
+	putchar('\n');
 
 	return (0);
 }
