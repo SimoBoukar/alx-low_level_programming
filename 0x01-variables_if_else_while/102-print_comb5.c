@@ -3,7 +3,8 @@
 /**
  * main - Entry point
  *
- * Description: Prints all possible different combination of two digits.
+ * Description: Prints all possible
+ * different combination of two digits.
  *
  * Return: 0
  */
@@ -25,7 +26,7 @@ int main(void)
 				putchar((seconDigit / 10) + 48);
 				putchar((seconDigit % 10) + 48);
 
-				if (firstDigit != 98 || seconDigit != 98)
+				if (firstDigit != 98 || seconDigit != 99)
 				{
 				putchar(',');
 				putchar(' ');
