@@ -5,7 +5,7 @@
  *
  * Description: Prints all possible different combination of two digits.
  *
- * Return: Always 0 (Success)
+ * Return: 0
  */
 
 int main(void)
@@ -14,7 +14,7 @@ int main(void)
 
 	while (firstDigit <= 99)
 	{
-		seconDigit = fistDigit;
+		seconDigit = firstDigit;
 		while (seconDigit <= 99)
 		{
 			if (seconDigit != firstDigit)
