@@ -5,7 +5,7 @@
  *
  * Description: Prints all digit single numbers.
  *
- * Return: 0 (Success)
+ * Return: Always 0 (Success)
  */
 
 int main(void)
