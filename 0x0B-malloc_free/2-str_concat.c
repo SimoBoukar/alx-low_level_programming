@@ -1,4 +1,4 @@
-#include "main.h"
+#include"main.h"
 
 /**
  * _strlen - calculate the length of a string
@@ -16,10 +16,10 @@ int _strlen(char *s)
 }
 
 /**
- * str_concat - get ends of input and add together for size
- * @s1: input one to concat
- * @s2: input two to concat
- * Return: concat of s1 and s2
+ * str_concat - concatenates two strings
+ * @s1: string 1
+ * @s2: string 2
+ * Return: pointer
  */
 
 char *str_concat(char *s1, char *s2)
@@ -34,15 +34,14 @@ char *str_concat(char *s1, char *s2)
 
 	size1 = _strlen(s1);
 	size2 = _strlen(s2);
-
-	ptr = malloc((size1 + size2) * sizeof(char) + 1);
+	ptr = malloc((size1 + size2) *sizeof(char) + 1);
 
 	if (ptr == 0)
 		return (0);
 
 	for (n = 0; n <= size1 + size2; n++)
 	{
-		if (n <= size1)
+		if (n < size1)
 			ptr[n] = s1[n];
 		else
 			ptr[n] = s2[n - size1];
