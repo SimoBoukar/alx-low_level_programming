@@ -29,5 +29,5 @@ char *_strdup(char *str)
 
 		ptr[sizeofchar] = str[sizeofchar];
 
-	return (sizeofchar);
+	return (ptr);
 }
