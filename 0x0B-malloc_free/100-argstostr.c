@@ -29,7 +29,7 @@ char *argstostr(int ac, char **av)
 	int i = 0, j = 0, counta = 0, cmpt;
 	char *s;
 
-	if (ac == NULL || av == NULL)
+	if (ac == NULL || *av == NULL)
 		return (NULL);
 
 	for (; i < ac; i++, counta++)
