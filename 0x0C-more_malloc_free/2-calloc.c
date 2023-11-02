@@ -1,6 +1,7 @@
 #include"main.h"
 #include<stdlib.h>
 #include<stddef.h>
+#include<stdio.h>
 
 /**
  * *_memset - fills mem with a cste byte
