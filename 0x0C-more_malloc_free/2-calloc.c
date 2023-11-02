@@ -4,42 +4,26 @@
 #include<stdio.h>
 
 /**
- * *_memset - fills mem with a cste byte
- * @s: pointer to put the cste
- * @b: cste
- * @n: max bytes to use
- * Return: s
+* _calloc - allocates memory for an array of @nmemb elements of
+* @size bytes each and returns a pointer to the allocated memory.
+*
+* @nmemb: allocate memory for array
+* @size: allocate element of size bytes
+*
+* Return: pointer to the allocated memory.
 */
-
-char *_memset(char *s, char b, unsigned int n)
-{
-	char *ptr = s;
-
-	while (n--)
-		*s++ = b;
-
-	return (ptr);
-}
-
-/**
- * *_calloc - allocates memory for an array, using malloc
- * @nmemb: array length
- * @size: size of each elemnt
- * Return: pointer
-*/
-
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	void *mem;
+	char *mem;
+	unsigned int i;
 
-	if (size == 0 || nmemb == 0)
+
+	if (nmemb == 0 || size == 0)
 		return (NULL);
-	mem = malloc(sizeof(int) * nmemb);
-
-	if (mem == 0)
+	mem = malloc(nmemb * size);
+	if (mem == NULL)
 		return (NULL);
-
-	_memset(mem, 0, sizeof(int) * nmemb);
-
+	for (i = 0; i < (nmemb * size); i++)
+		mem[i] = 0;
 	return (mem);
 }
