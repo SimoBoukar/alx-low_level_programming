@@ -1,4 +1,5 @@
 #include"main.h"
+#include<stdlib.h>
 
 /**
  * _puts - pointer to a string, followed by new line
@@ -12,7 +13,7 @@ void _puts(char *ptrs)
 
 	while (ptrs[i])
 	{
-		_putchar(str[i]);
+		_putchar(ptrs[i]);
 		i++;
 	}
 }
@@ -23,7 +24,7 @@ void _puts(char *ptrs)
  * Return: integer converted
 */
 
-int _atoi((const char *s))
+int _atoi(const char *s)
 {
 	int sign = 1;
 	unsigned long int resp = 0, firstnumber, i;
@@ -54,11 +55,11 @@ void print_int(unsigned long int a)
 {
 	unsigned long int divisor = 1, i, resp;
 
-	for (i = 0; n / divisor > 9; i++, divisor *= 10)
+	for (i = 0; a / divisor > 9; i++, divisor *= 10)
 		;
-	for (; divisor >= 1; n %= divisor, divisor /= 10)
+	for (; divisor >= 1; a %= divisor, divisor /= 10)
 	{
-		resp = n / divisor;
+		resp = a / divisor;
 		_putchar('0' + resp);
 	}
 }
