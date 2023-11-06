@@ -8,7 +8,7 @@
  * @owner: pointer of type char
 */
 
-struct dog
+typedef struct dog dog_t
 {
 	char *name;
 	float age;
