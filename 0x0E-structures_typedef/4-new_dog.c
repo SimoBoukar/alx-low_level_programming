@@ -30,7 +30,7 @@ char *_strcpy(char *destination, char *source)
 
 	for (a = 0; source[a]; a++)
 		destination[a] = source[a];
-		destination[a] = '\0';
+	destination[a] = '\0';
 
 		return (destination);
 }
@@ -54,14 +54,14 @@ dog_t *new_dog(char *name, float age, char *owner)
 	dog = (dog_t *) malloc(sizeof(dog_t));
 	if (dog == NULL)
 		return (NULL);
-	(*dog).name = malloc(sizeof(char) * (_strlen(name) + 1);
+	(*dog).name = malloc(sizeof(char) * (_strlen(name) + 1));
 			if ((*dog).name == NULL)
 			{
 			free((*dog).name);
 			free(dog);
 			return (NULL);
 			}
-	(*dog).owner = malloc(sizeof(char) * (_strlen(owner) + 1);
+	(*dog).owner = malloc(sizeof(char) * (_strlen(owner) + 1));
 			if ((*dog).owner == NULL)
 			{
 			free((*dog).owner);
@@ -70,6 +70,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 			}
 		(*dog).name = _strcpy((*dog).name, name);
 		(*dog).age = age;
-		(*dog).owner = _strcpy((*dog).owner);
-	return (dog);
+		(*dog).owner = _strcpy((*dog).owner, owner);
+
+			return (dog);
 }
