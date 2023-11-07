@@ -6,7 +6,6 @@
  * @name: pointer of type char
  * @age: float
  * @owner: pointer of type char
- * Description: Longer description
 */
 
 struct dog
