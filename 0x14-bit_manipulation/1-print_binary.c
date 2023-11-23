@@ -13,7 +13,7 @@ void print_binary(unsigned long int n)
 
 	while (bits)
 	{
-		if (n & 1L << --bits)
+		if (n & 1l << --bits)
 		{
 			_putchar('1');
 			printed++;
