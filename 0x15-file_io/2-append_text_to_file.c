@@ -25,3 +25,21 @@ int append_text_to_file(const char *filename, char *text_content)
 	close(fd);
 	return (num_bytes == len ? 1 : -1);
 }
+
+/**
+ * _strlen - return length of a string
+ * @s: the string whose length to check
+ *
+ * Return: integer length of str
+*/
+
+int _strlen(char *s)
+{
+	int length = 0;
+
+	if (!s)
+		return (0);
+	while (*s++)
+		length++;
+	return (length);
+}
