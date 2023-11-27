@@ -105,7 +105,7 @@ void print_osabi(Elf64_Ehdr h)
 		case ELFOSABI_HPUX:
 			printf("UNIX - HP-UX");
 			break;
-		case ELFOSABI_NETBSD;
+		case ELFOSABI_NETBSD:
 			printf("UNIX - NetBSD");
 			break;
 		case ELFOSABI_LINUX:
@@ -274,7 +274,7 @@ int main(int ac, char **av)
 		dprintf(STDERR_FILENO, "Not ELF file: %s\n", av[1]), exit(98);
 
 	print_magic(h);
-	printf_class(h);
+	print_class(h);
 	print_data(h);
 	print_version(h);
 	print_osabi(h);
@@ -283,6 +283,6 @@ int main(int ac, char **av)
 	print_entry(h);
 
 	if (close(fd))
-		dprintf(STDERR_FILENO, "Error closing file descriptor: %s\n", fd), exit(98);
+		dprintf(STDERR_FILENO, "Error closing file descriptor: %d\n", fd), exit(98);
 	return (EXIT_SUCCESS);
 }
