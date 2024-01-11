@@ -7,8 +7,8 @@
 
 /**
  * struct dlistint_s - doubly linked list
- * @i: integer
- * @pre: points to the previous node
+ * @n: integer
+ * @prev: points to the previous node
  * @next: points to the next node
  * Description: doubly linked list node structure
  * for Holberton project
