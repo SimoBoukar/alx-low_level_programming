@@ -5,6 +5,7 @@
  * dlistint_t list at a given position
  * @h: pointer to the head of dlistint_t list
  * @idx: the position to insert the new node
+ * @n: the integer for the new node to contain
  *
  * Return: if the function fails - NULL
  * otherwise - the address of the new node
